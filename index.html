@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Erika Tyagi">
+<meta name="dcterms.date" content="2022-08-15">
 
 <title>Virtual Environments</title>
 <style>
@@ -103,10 +105,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-should-i-use-a-virtual-environment" id="toc-why-should-i-use-a-virtual-environment" class="nav-link active" data-scroll-target="#why-should-i-use-a-virtual-environment">Why should I use a virtual environment?</a></li>
-  <li><a href="#which-environment-manager-should-i-use" id="toc-which-environment-manager-should-i-use" class="nav-link" data-scroll-target="#which-environment-manager-should-i-use">Which environment manager should I use?</a></li>
-  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment">How do I set up a virtual environment?</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  <li><a href="#why-should-i-use-a-virtual-environment" id="toc-why-should-i-use-a-virtual-environment" class="nav-link active" data-scroll-target="#why-should-i-use-a-virtual-environment"> <span class="header-section-number">1</span> Why should I use a virtual environment?</a></li>
+  <li><a href="#which-environment-manager-should-i-use" id="toc-which-environment-manager-should-i-use" class="nav-link" data-scroll-target="#which-environment-manager-should-i-use"> <span class="header-section-number">2</span> Which environment manager should I use?</a></li>
+  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment"> <span class="header-section-number">3</span> How do I set up a virtual environment?</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">4</span> Additional Resources</a></li>
   </ul>
 </nav>
 </div>
@@ -121,7 +123,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Erika Tyagi </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 15, 2022</p>
+    </div>
+  </div>
     
   </div>
   
@@ -129,13 +143,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This guide is intended to help R and Python users at the Urban Institute start using virtual environments. This guide assumes familiarity with Git and GitHub (see <a href="https://ui-research.github.io/urbngit/">this guide</a> if you are not familiar with these tools) and is focused on helping folks start using virtual environments without having to meaningfully modify their existing workflows.</p>
-<section id="why-should-i-use-a-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="why-should-i-use-a-virtual-environment">Why should I use a virtual environment?</h2>
+<section id="why-should-i-use-a-virtual-environment" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="why-should-i-use-a-virtual-environment"><span class="header-section-number">1</span> Why should I use a virtual environment?</h2>
 <p>Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They can help you reliably reproduce your environment to more easily collaborate with others or run your code on powerful <a href="http://tech-tools.urban.org/ec2-submission/">virtual computers in the cloud</a>. They also let you create isolated environments for different projects so that you can, for example, update a package for one project without accidentally breaking other projects.</p>
 <p>Virtual environments accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.</p>
 </section>
-<section id="which-environment-manager-should-i-use" class="level2">
-<h2 class="anchored" data-anchor-id="which-environment-manager-should-i-use">Which environment manager should I use?</h2>
+<section id="which-environment-manager-should-i-use" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="which-environment-manager-should-i-use"><span class="header-section-number">2</span> Which environment manager should I use?</h2>
 <p>For R projects, we recommend using <code>renv</code>. For Python projects, we recommend using <code>conda</code>. These are by no means the only environment managers for R and Python, but we’ve found these to be the most reliable and user-friendly for the majority of use cases at Urban.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -176,8 +190,8 @@ Alternatives for Python
 </div>
 </div>
 </section>
-<section id="how-do-i-set-up-a-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="how-do-i-set-up-a-virtual-environment">How do I set up a virtual environment?</h2>
+<section id="how-do-i-set-up-a-virtual-environment" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="how-do-i-set-up-a-virtual-environment"><span class="header-section-number">3</span> How do I set up a virtual environment?</h2>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -270,8 +284,8 @@ Where do I run these commands?
 </div>
 </div>
 </section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<section id="additional-resources" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">4</span> Additional Resources</h2>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">

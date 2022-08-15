@@ -1,10 +1,12 @@
 ---
-title: "Virtual Environments"
+title: Virtual Environments
+author: Erika Tyagi
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
   html:
     toc: true
-theme: 
-    - www/web_report.scss
+    theme: www/urbn.scss
+    number-sections: true
 editor: visual
 execute:
   echo: true
