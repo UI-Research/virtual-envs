@@ -1,6 +1,5 @@
 ---
 title: Virtual Environments
-author: Erika Tyagi
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
   html:
@@ -17,9 +16,25 @@ This guide is intended to help R and Python users at the Urban Institute start u
 
 ## Why should I use a virtual environment? 
 
-Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They can help you reliably reproduce your environment to more easily collaborate with others or run your code on powerful [virtual computers in the cloud](http://tech-tools.urban.org/ec2-submission/). They also let you create isolated environments for different projects so that you can, for example, update a package for one project without accidentally breaking other projects. 
+Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.  
 
-Virtual environments accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.   
+To make this more concrete, here's a few situations when setting up a virtual environment can save you several hours (or even days!) of frustration: 
+
+* You published an analysis based on 2021 data. A year later, you want to update the analysis with 2022 data, but your code no longer works because a function in `dplyr` was updated. 
+* You need to update your version of `pandas` for a particular project, but a different project requires an older version of the library. 
+* Your coworker is running into errors running your code because of differences in package versions between your computers. 
+* You need to use Python 2.7 for a legacy project, while using Python 3.7 for all other projects. 
+* You want to use a new library that has known compatibility issues with Python 3.8 on Windows computers, so you want to use Python 3.7 for just one specific project. 
+* You got a new computer and don't want to spend hours remembering which R packages to install while resolving `Error in library(<>): there is no package called ‘<>’` errors. 
+* Your code takes a long time to run locally, so you want to leverage powerful [virtual computers in the cloud](http://tech-tools.urban.org/ec2-submission/) – or scale to use tens or hundreds or computers simultaneously – but you first need to install the relevant packages on the virtual machine(s). 
+
+Importantly, virtual environments are just one piece of reproducible research workflows – they are NOT replacements for other important components of reproducibility, such as version control, directory management, and data provenance. 
+
+## When should I use a virtual environment? 
+
+Ideally, always. You'll be more likely to regret NOT setting up a virtual environment for a project down the line than to regret spending a few minutes doing so for a project that didn't necessarily require one. Getting into the habit of using virtual environments for smaller projects will also help you develop confidence when using them for larger projects with more collaborators and complex dependencies.
+
+While the best time to set up a virtual environment for a project is at the very beginning (right after initializing your GitHub repository), the second best time is right now – whether you're halfway through writing your code, ready to publish your results, or have already published your analysis. 
 
 ## Which environment manager should I use? 
 
@@ -173,7 +188,7 @@ All commands below should be run from the Anaconda Prompt or a terminal window (
 
 :::
 
-## Additional Resources 
+## Additional resources 
 
 ::: {.panel-tabset}
 
@@ -194,3 +209,26 @@ In addition to the commands included above, a few other commonly used `conda` co
 The official [documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) and [this guide](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/04-sharing-environments/index.html) from the Carpentries are also helpful resources. 
 
 :::
+
+## Getting help 
+
+Adding a new tool to your workflow can be hard, but we're here to help! Feel free to email Erika Tyagi (etyagi@urban.org) or drop a message in the #reproducible-research Slack channel with any questions or if you run into issues. 
+
+## Obligatory xkcd comic 
+
+I couldn't pick just one, so here's three: 
+
+::: {.panel-tabset}
+
+### Dependency 
+[![](https://imgs.xkcd.com/comics/dependency.png)](https://xkcd.com/2347/){fig-align="center"}
+
+### Python Environment 
+[![](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/){fig-align="center"}
+
+### Workflow
+[![](https://imgs.xkcd.com/comics/workflow.png)](https://xkcd.com/1172/){fig-align="center"}
+
+:::
+
+---

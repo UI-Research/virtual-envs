@@ -6,8 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Erika Tyagi">
-<meta name="dcterms.date" content="2022-08-15">
+<meta name="dcterms.date" content="2022-08-17">
 
 <title>Virtual Environments</title>
 <style>
@@ -106,9 +105,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#why-should-i-use-a-virtual-environment" id="toc-why-should-i-use-a-virtual-environment" class="nav-link active" data-scroll-target="#why-should-i-use-a-virtual-environment"> <span class="header-section-number">1</span> Why should I use a virtual environment?</a></li>
-  <li><a href="#which-environment-manager-should-i-use" id="toc-which-environment-manager-should-i-use" class="nav-link" data-scroll-target="#which-environment-manager-should-i-use"> <span class="header-section-number">2</span> Which environment manager should I use?</a></li>
-  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment"> <span class="header-section-number">3</span> How do I set up a virtual environment?</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">4</span> Additional Resources</a></li>
+  <li><a href="#when-should-i-use-a-virtual-environment" id="toc-when-should-i-use-a-virtual-environment" class="nav-link" data-scroll-target="#when-should-i-use-a-virtual-environment"> <span class="header-section-number">2</span> When should I use a virtual environment?</a></li>
+  <li><a href="#which-environment-manager-should-i-use" id="toc-which-environment-manager-should-i-use" class="nav-link" data-scroll-target="#which-environment-manager-should-i-use"> <span class="header-section-number">3</span> Which environment manager should I use?</a></li>
+  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment"> <span class="header-section-number">4</span> How do I set up a virtual environment?</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">5</span> Additional resources</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help"> <span class="header-section-number">6</span> Getting help</a></li>
+  <li><a href="#obligatory-xkcd-comic" id="toc-obligatory-xkcd-comic" class="nav-link" data-scroll-target="#obligatory-xkcd-comic"> <span class="header-section-number">7</span> Obligatory xkcd comic</a></li>
   </ul>
 </nav>
 </div>
@@ -123,17 +125,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Erika Tyagi </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 15, 2022</p>
+      <p class="date">August 17, 2022</p>
     </div>
   </div>
     
@@ -145,11 +141,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This guide is intended to help R and Python users at the Urban Institute start using virtual environments. This guide assumes familiarity with Git and GitHub (see <a href="https://ui-research.github.io/urbngit/">this guide</a> if you are not familiar with these tools) and is focused on helping folks start using virtual environments without having to meaningfully modify their existing workflows.</p>
 <section id="why-should-i-use-a-virtual-environment" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="why-should-i-use-a-virtual-environment"><span class="header-section-number">1</span> Why should I use a virtual environment?</h2>
-<p>Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They can help you reliably reproduce your environment to more easily collaborate with others or run your code on powerful <a href="http://tech-tools.urban.org/ec2-submission/">virtual computers in the cloud</a>. They also let you create isolated environments for different projects so that you can, for example, update a package for one project without accidentally breaking other projects.</p>
-<p>Virtual environments accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.</p>
+<p>Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.</p>
+<p>To make this more concrete, here’s a few situations when setting up a virtual environment can save you several hours (or even days!) of frustration:</p>
+<ul>
+<li>You published an analysis based on 2021 data. A year later, you want to update the analysis with 2022 data, but your code no longer works because a function in <code>dplyr</code> was updated.</li>
+<li>You need to update your version of <code>pandas</code> for a particular project, but a different project requires an older version of the library.</li>
+<li>Your coworker is running into errors running your code because of differences in package versions between your computers.</li>
+<li>You need to use Python 2.7 for a legacy project, while using Python 3.7 for all other projects.</li>
+<li>You want to use a new library that has known compatibility issues with Python 3.8 on Windows computers, so you want to use Python 3.7 for just one specific project.</li>
+<li>You got a new computer and don’t want to spend hours remembering which R packages to install while resolving <code>Error in library(&lt;&gt;): there is no package called ‘&lt;&gt;’</code> errors.</li>
+<li>Your code takes a long time to run locally, so you want to leverage powerful <a href="http://tech-tools.urban.org/ec2-submission/">virtual computers in the cloud</a> – or scale to use tens or hundreds or computers simultaneously – but you first need to install the relevant packages on the virtual machine(s).</li>
+</ul>
+<p>Importantly, virtual environments are just one piece of reproducible research workflows – they are NOT replacements for other important components of reproducibility, such as version control, directory management, and data provenance.</p>
 </section>
-<section id="which-environment-manager-should-i-use" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="which-environment-manager-should-i-use"><span class="header-section-number">2</span> Which environment manager should I use?</h2>
+<section id="when-should-i-use-a-virtual-environment" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="when-should-i-use-a-virtual-environment"><span class="header-section-number">2</span> When should I use a virtual environment?</h2>
+<p>Ideally, always. You’ll be more likely to regret NOT setting up a virtual environment for a project down the line than to regret spending a few minutes doing so for a project that didn’t necessarily require one. Getting into the habit of using virtual environments for smaller projects will also help you develop confidence when using them for larger projects with more collaborators and complex dependencies.</p>
+<p>While the best time to set up a virtual environment for a project is at the very beginning (right after initializing your GitHub repository), the second best time is right now – whether you’re halfway through writing your code, ready to publish your results, or have already published your analysis.</p>
+</section>
+<section id="which-environment-manager-should-i-use" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="which-environment-manager-should-i-use"><span class="header-section-number">3</span> Which environment manager should I use?</h2>
 <p>For R projects, we recommend using <code>renv</code>. For Python projects, we recommend using <code>conda</code>. These are by no means the only environment managers for R and Python, but we’ve found these to be the most reliable and user-friendly for the majority of use cases at Urban.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -190,8 +201,8 @@ Alternatives for Python
 </div>
 </div>
 </section>
-<section id="how-do-i-set-up-a-virtual-environment" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="how-do-i-set-up-a-virtual-environment"><span class="header-section-number">3</span> How do I set up a virtual environment?</h2>
+<section id="how-do-i-set-up-a-virtual-environment" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="how-do-i-set-up-a-virtual-environment"><span class="header-section-number">4</span> How do I set up a virtual environment?</h2>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -284,8 +295,8 @@ Where do I run these commands?
 </div>
 </div>
 </section>
-<section id="additional-resources" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">4</span> Additional Resources</h2>
+<section id="additional-resources" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">5</span> Additional resources</h2>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -307,6 +318,41 @@ Where do I run these commands?
 </div>
 </div>
 </div>
+</section>
+<section id="getting-help" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="getting-help"><span class="header-section-number">6</span> Getting help</h2>
+<p>Adding a new tool to your workflow can be hard, but we’re here to help! Feel free to email Erika Tyagi (etyagi@urban.org) or drop a message in the #reproducible-research Slack channel with any questions or if you run into issues.</p>
+</section>
+<section id="obligatory-xkcd-comic" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="obligatory-xkcd-comic"><span class="header-section-number">7</span> Obligatory xkcd comic</h2>
+<p>I couldn’t pick just one, so here’s three:</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Dependency</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python Environment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Workflow</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://xkcd.com/2347/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/dependency.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://xkcd.com/1987/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/python_environment.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://xkcd.com/1172/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/workflow.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
 </section>
 
 </main>
