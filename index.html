@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-08-17">
+<meta name="dcterms.date" content="2022-08-18">
 
 <title>Virtual Environments</title>
 <style>
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 17, 2022</p>
+      <p class="date">August 18, 2022</p>
     </div>
   </div>
     
@@ -144,15 +144,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Virtual environments promote reproducibility by letting you let you specify project-specific versions of packages. They accomplish this by making it easy to take a snapshot of the version of packages used in a project and restore that snapshot on other computers. They also make it easy to switch between snapshots on a single computer as you switch between projects.</p>
 <p>To make this more concrete, here’s a few situations when setting up a virtual environment can save you several hours (or even days!) of frustration:</p>
 <ul>
-<li>You published an analysis based on 2021 data. A year later, you want to update the analysis with 2022 data, but your code no longer works because a function in <code>dplyr</code> was updated.</li>
-<li>You need to update your version of <code>pandas</code> for a particular project, but a different project requires an older version of the library.</li>
+<li>You published an analysis based on 2021 data. A year later, you want to update the analysis with 2022 data, but your code no longer works because a function in a package was updated.</li>
 <li>Your coworker is running into errors running your code because of differences in package versions between your computers.</li>
 <li>You need to use Python 2.7 for a legacy project, while using Python 3.7 for all other projects.</li>
 <li>You want to use a new library that has known compatibility issues with Python 3.8 on Windows computers, so you want to use Python 3.7 for just one specific project.</li>
-<li>You got a new computer and don’t want to spend hours remembering which R packages to install while resolving <code>Error in library(&lt;&gt;): there is no package called ‘&lt;&gt;’</code> errors.</li>
-<li>Your code takes a long time to run locally, so you want to leverage powerful <a href="http://tech-tools.urban.org/ec2-submission/">virtual computers in the cloud</a> – or scale to use tens or hundreds or computers simultaneously – but you first need to install the relevant packages on the virtual machine(s).</li>
+<li>You got a new computer and don’t want to spend hours remembering which R packages to install through endless <code>Error in library(&lt;&gt;): there is no package called ‘&lt;&gt;’</code> errors.</li>
+<li>Your code takes a long time to run locally, so you want to leverage powerful <a href="http://tech-tools.urban.org/ec2-submission/">virtual computers in the cloud</a> – or scale to use tens, hundreds, or thousands of computers simultaneously – but you first need to install the relevant packages on the virtual machine(s).</li>
 </ul>
-<p>Importantly, virtual environments are just one piece of reproducible research workflows – they are NOT replacements for other important components of reproducibility, such as version control, directory management, and data provenance.</p>
+<p>Importantly, virtual environments are just one piece of reproducible research workflows – they are NOT replacements for other important components of reproducibility like version control, directory management, or data provenance.</p>
 </section>
 <section id="when-should-i-use-a-virtual-environment" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="when-should-i-use-a-virtual-environment"><span class="header-section-number">2</span> When should I use a virtual environment?</h2>
@@ -321,7 +320,7 @@ Where do I run these commands?
 </section>
 <section id="getting-help" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="getting-help"><span class="header-section-number">6</span> Getting help</h2>
-<p>Adding a new tool to your workflow can be hard, but we’re here to help! Feel free to email Erika Tyagi (etyagi@urban.org) or drop a message in the #reproducible-research Slack channel with any questions or if you run into issues.</p>
+<p>Adding a new tool to your workflow can be hard, but we’re here to help! Feel free to email Erika Tyagi (etyagi@urban.org) or drop a message in the <strong>#reproducible-research</strong> Slack channel with any questions or if you run into issues.</p>
 </section>
 <section id="obligatory-xkcd-comic" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="obligatory-xkcd-comic"><span class="header-section-number">7</span> Obligatory xkcd comic</h2>
