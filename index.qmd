@@ -62,6 +62,23 @@ If you're using R and Python, `conda` or `renv` are good options given their emp
 
 ## How do I set up a virtual environment? 
 
+### The big idea 
+
+::: {.panel-tabset}
+
+#### Overall 
+[![](www/images/overall-workflow.png)]{fig-align="center"}
+
+#### R
+[![](www/images/renv-workflow.png)]{fig-align="center"}
+
+#### Python
+[![](www/images/conda-workflow.png)]{fig-align="center"}
+
+:::
+
+### Workflow and commands 
+
 ::: {.panel-tabset}
 
 ### R 
@@ -195,7 +212,7 @@ All commands below should be run from the Anaconda Prompt or a terminal window (
 
 ### R
 
-For more information, we recommend the official [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html#package-sources) and [Collaborating with renv](https://rstudio.github.io/renv/articles/collaborating.html) vignettes. 
+The 10-minute talk from rstudio::conf(2022) called [You should be using renv]((https://www.rstudio.com/conference/2022/talks/you-should-use-renv/)) from E. David Aja is a great overview of the motivation for using the tool. We also recommend the official [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html#package-sources) and [Collaborating with renv](https://rstudio.github.io/renv/articles/collaborating.html) vignettes. 
 
 ### Python 
 
