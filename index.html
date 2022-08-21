@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Erika Tyagi">
-<meta name="dcterms.date" content="2022-08-19">
+<meta name="dcterms.date" content="2022-08-21">
 
 <title>Virtual Environments</title>
 <style>
@@ -108,7 +108,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#why-should-i-use-a-virtual-environment" id="toc-why-should-i-use-a-virtual-environment" class="nav-link active" data-scroll-target="#why-should-i-use-a-virtual-environment"> <span class="header-section-number">1</span> Why should I use a virtual environment?</a></li>
   <li><a href="#when-should-i-use-a-virtual-environment" id="toc-when-should-i-use-a-virtual-environment" class="nav-link" data-scroll-target="#when-should-i-use-a-virtual-environment"> <span class="header-section-number">2</span> When should I use a virtual environment?</a></li>
   <li><a href="#which-environment-manager-should-i-use" id="toc-which-environment-manager-should-i-use" class="nav-link" data-scroll-target="#which-environment-manager-should-i-use"> <span class="header-section-number">3</span> Which environment manager should I use?</a></li>
-  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment"> <span class="header-section-number">4</span> How do I set up a virtual environment?</a></li>
+  <li><a href="#how-do-i-set-up-a-virtual-environment" id="toc-how-do-i-set-up-a-virtual-environment" class="nav-link" data-scroll-target="#how-do-i-set-up-a-virtual-environment"> <span class="header-section-number">4</span> How do I set up a virtual environment?</a>
+  <ul class="collapse">
+  <li><a href="#the-big-idea" id="toc-the-big-idea" class="nav-link" data-scroll-target="#the-big-idea"> <span class="header-section-number">4.1</span> The big idea</a></li>
+  <li><a href="#workflow-and-commands" id="toc-workflow-and-commands" class="nav-link" data-scroll-target="#workflow-and-commands"> <span class="header-section-number">4.2</span> Workflow and commands</a></li>
+  </ul></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">5</span> Additional resources</a></li>
   <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help"> <span class="header-section-number">6</span> Getting help</a></li>
   <li><a href="#obligatory-xkcd-comic" id="toc-obligatory-xkcd-comic" class="nav-link" data-scroll-target="#obligatory-xkcd-comic"> <span class="header-section-number">7</span> Obligatory xkcd comic</a></li>
@@ -137,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 19, 2022</p>
+      <p class="date">August 21, 2022</p>
     </div>
   </div>
     
@@ -210,10 +214,29 @@ Alternatives for Python
 </section>
 <section id="how-do-i-set-up-a-virtual-environment" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="how-do-i-set-up-a-virtual-environment"><span class="header-section-number">4</span> How do I set up a virtual environment?</h2>
+<section id="the-big-idea" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="the-big-idea"><span class="header-section-number">4.1</span> The big idea</h3>
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Overall</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span data-fig-align="center"><img src="www/images/overall-workflow.png" class="img-fluid"></span></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span data-fig-align="center"><img src="www/images/renv-workflow.png" class="img-fluid"></span></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><span data-fig-align="center"><img src="www/images/conda-workflow.png" class="img-fluid"></span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="workflow-and-commands" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="workflow-and-commands"><span class="header-section-number">4.2</span> Workflow and commands</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>To set up a virtual environment for an R project, we recommend using <code>renv</code>. To install <code>renv</code>, use the standard syntax to install R packages from CRAN: <code>install.packages("renv")</code>.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -244,7 +267,7 @@ Where do I run these commands?
 <li><p><strong>Repeat</strong> the process. As you and your collaborators install, update, and remove packages, repeat steps 3-5 to save and load the state of your project to the <code>renv.lock</code> file across computers.</p></li>
 </ol>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>To set up a virtual environment for a Python project, we recommend using <code>conda</code>, which is built into the <a href="https://www.anaconda.com/products/distribution">Anaconda distribution</a> through Anaconda or <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>. If you haven’t already installed Anaconda, see <a href="https://github.com/UI-Research/python-resources/blob/main/notebooks/anaconda-installation.ipynb">this guide</a> from a previous Python Users Group session. You can verify that <code>conda</code> is installed and running on your computer with <code>conda --version</code>. If you get an error, see the Anaconda <a href="https://conda.io/projects/conda/en/latest/user-guide/troubleshooting.html">troubleshooting guide</a>.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -302,15 +325,16 @@ Where do I run these commands?
 </div>
 </div>
 </section>
+</section>
 <section id="additional-resources" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">5</span> Additional resources</h2>
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>For more information, we recommend the official <a href="https://rstudio.github.io/renv/articles/renv.html#package-sources">Introduction to renv</a> and <a href="https://rstudio.github.io/renv/articles/collaborating.html">Collaborating with renv</a> vignettes.</p>
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>The 10-minute talk from rstudio::conf(2022) called <a href="(https://www.rstudio.com/conference/2022/talks/you-should-use-renv/)">You should be using renv</a> from E. David Aja is a great overview of the motivation for using the tool. We also recommend the official <a href="https://rstudio.github.io/renv/articles/renv.html#package-sources">Introduction to renv</a> and <a href="https://rstudio.github.io/renv/articles/collaborating.html">Collaborating with renv</a> vignettes.</p>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p>We recommend keeping the official <code>conda</code> <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">cheat sheet</a> handy. In addition to the commands included above, a few other commonly used <code>conda</code> commands include:</p>
 <ul>
 <li><code>conda deactivate</code> deactivates the current environment<br>
@@ -334,23 +358,23 @@ Where do I run these commands?
 <h2 data-number="7" class="anchored" data-anchor-id="obligatory-xkcd-comic"><span class="header-section-number">7</span> Obligatory xkcd comic</h2>
 <p>I couldn’t pick just one, so here’s three:</p>
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Dependency</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python Environment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Workflow</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Dependency</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Python Environment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Workflow</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://xkcd.com/2347/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/dependency.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://xkcd.com/1987/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/python_environment.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://xkcd.com/1172/" data-fig-align="center"><img src="https://imgs.xkcd.com/comics/workflow.png" class="img-fluid figure-img"></a></p>
