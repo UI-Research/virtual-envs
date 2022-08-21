@@ -2,7 +2,7 @@
 $theme: "urbn" !default;
 
 // importing fonts
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato:bold,italic,bolditalic&family=Yanone+Kaffeesatz&display=swap');
 
 //
 // Color system
@@ -47,6 +47,17 @@ $body-color:    $gray-700 !default;
 
 $font-family-sans-serif: 'Lato', Tahoma, sans-serif !default;
 $headings-color:         $cyan !default;
+
+$font-size-base:          16px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; 
+$font-size-small:         ceil(($font-size-base * .85)) !default; 
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; 
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; 
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; 
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; 
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * .85)) !default; 
+$nav-link-height:         $font-size-base !default;
 
 // Dropdowns
 
