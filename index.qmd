@@ -1,7 +1,6 @@
 ---
 title: Virtual Environments
 subtitle: Introduction to Virtual Environments with R and Python at the Urban Institute
-author: Erika Tyagi
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
   html:
